@@ -1,0 +1,51 @@
+.footer {
+  background-color: var(--color-gray-12);
+
+  display: grid;
+  grid-template-areas: "writings visuals" "copy copy";
+  column-gap: 1rem;
+  row-gap: 2rem;
+
+  padding-block: 1rem;
+
+  .writings {
+    grid-area: writings;
+
+    .logo {
+      margin-block-end: 0.25rem;
+
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .visuals {
+    grid-area: visuals;
+
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+
+    .certificates {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+
+      > li {
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .copy {
+    grid-area: copy;
+
+    text-align: center;
+  }
+}
