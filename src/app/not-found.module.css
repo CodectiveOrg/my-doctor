@@ -1,0 +1,44 @@
+.not-found {
+  display: grid;
+  grid-template-areas: "writings visuals" "search visuals";
+  place-content: center;
+  gap: 1rem;
+
+  min-block-size: 100%;
+
+  .writings {
+    grid-area: writings;
+
+    .status-code {
+      font-size: var(--fz-800);
+      font-weight: 300;
+
+      line-height: 0.8;
+    }
+
+    h1 {
+      margin-block-end: 1rem;
+
+      font-size: var(--fz-600);
+    }
+
+    p {
+      max-inline-size: 50ch;
+    }
+  }
+
+  .visuals {
+    grid-area: visuals;
+
+    min-block-size: 100%;
+    block-size: 0;
+
+    img {
+      block-size: 100%;
+    }
+  }
+
+  .search {
+    grid-area: search;
+  }
+}
