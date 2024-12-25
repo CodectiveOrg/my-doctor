@@ -6,6 +6,8 @@ import { Vazirmatn } from "next/font/google";
 import HeaderComponent from "@/components/header/header.component";
 import FooterComponent from "@/components/footer/footer.component";
 
+import "@/styles/typography.css";
+
 import "./globals.css";
 
 const vazirmatn = Vazirmatn({

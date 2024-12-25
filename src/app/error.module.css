@@ -1,0 +1,70 @@
+.error {
+  display: grid;
+  grid-template-areas: "writings visuals" "actions actions" "trace trace";
+  grid-template-columns: repeat(2, minmax(0, auto));
+  place-content: center;
+  column-gap: 4rem;
+  row-gap: 1rem;
+
+  min-block-size: 100%;
+
+  .writings {
+    grid-area: writings;
+
+    .status-code {
+      font-size: var(--fz-800);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-block-end: 1rem;
+
+      font-size: var(--fz-600);
+    }
+  }
+
+  .visuals {
+    grid-area: visuals;
+  }
+
+  .actions {
+    grid-area: actions;
+    grid-column: 1 / -1;
+
+    button {
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+
+      padding: 0.5rem 2rem;
+
+      border: none;
+      border-radius: var(--border-radius);
+
+      font-size: 1rem;
+      font-weight: 900;
+
+      cursor: pointer;
+    }
+  }
+
+  .trace {
+    grid-area: trace;
+
+    min-inline-size: 100%;
+    inline-size: 0;
+
+    margin-block-start: 2rem;
+
+    details {
+      summary {
+        cursor: pointer;
+      }
+
+      pre {
+        overflow: auto;
+
+        max-block-size: 12rem;
+      }
+    }
+  }
+}
