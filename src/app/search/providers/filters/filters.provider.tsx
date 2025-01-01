@@ -14,14 +14,22 @@ type ContextValue = {
   filters: FiltersType;
   changeFilter: <TKey extends keyof FiltersType>(
     key: TKey,
-    value: Exclude<FiltersType[TKey], undefined>,
+    value: FiltersType[TKey],
   ) => void;
   removeFilter: <TKey extends keyof FiltersType>(key: TKey) => void;
   clearAll: () => void;
 };
 
+const defaultFilters: FiltersType = {
+  even: true,
+  odd: true,
+  three: true,
+  five: true,
+  seven: true,
+};
+
 export const FiltersContext = createContext<ContextValue>({
-  filters: {},
+  filters: { ...defaultFilters },
   changeFilter: () => {},
   removeFilter: () => {},
   clearAll: () => {},
@@ -30,12 +38,12 @@ export const FiltersContext = createContext<ContextValue>({
 type Props = PropsWithChildren;
 
 export default function FiltersProvider({ children }: Props): ReactElement {
-  const [filters, setFilters] = useState<FiltersType>({});
+  const [filters, setFilters] = useState<FiltersType>({ ...defaultFilters });
 
   const changeFilter = useCallback(
     <TKey extends keyof FiltersType>(
       key: TKey,
-      value: Exclude<FiltersType[TKey], undefined>,
+      value: FiltersType[TKey],
     ): void => {
       setFilters((old) => ({ ...old, [key]: value }));
     },
@@ -54,7 +62,7 @@ export default function FiltersProvider({ children }: Props): ReactElement {
   );
 
   const clearAll = useCallback((): void => {
-    setFilters({});
+    setFilters({ ...defaultFilters });
   }, []);
 
   return (
