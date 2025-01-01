@@ -1,11 +1,14 @@
 .page {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  align-items: start;
   gap: 1rem;
 
   margin-block-end: 2rem;
 
   .filters {
+    display: grid;
+    gap: 1rem;
   }
 
   .results {
