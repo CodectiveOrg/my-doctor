@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 
 import CardComponent from "@/components/card/card.component";
+import FilterButtonComponent from "@/components/filter-button/filter-button.component";
 
 import styles from "./page.module.css";
 
@@ -14,8 +15,10 @@ export default function Page(): ReactElement {
       <div className={styles.filters}>
         <CardComponent>
           <div className={styles.title}>زوج یا فرد</div>
-          <button>زوج</button>
-          <button>فرد</button>
+          <div className={styles.buttons}>
+            <FilterButtonComponent>زوج</FilterButtonComponent>
+            <FilterButtonComponent>فرد</FilterButtonComponent>
+          </div>
         </CardComponent>
       </div>
       <ul className={styles.results}>

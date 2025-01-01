@@ -5,6 +5,20 @@
 
   margin-block-end: 2rem;
 
+  .filters {
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      margin-block-start: 0.5rem;
+
+      > * {
+        flex: 1 0 auto;
+      }
+    }
+  }
+
   .results {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
