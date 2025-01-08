@@ -1,0 +1,151 @@
+.results {
+  display: grid;
+  gap: 1rem;
+
+  > li {
+    background-color: var(--color-surface-700);
+    box-shadow: var(--shadow-400);
+
+    display: grid;
+    grid-template-areas: "header actions" "address actions" "badges actions";
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
+
+    .header {
+      grid-area: header;
+
+      display: grid;
+      grid-template-areas: "image name badges" "image brief brief";
+      grid-template-columns: auto 1fr auto;
+      column-gap: 0.5rem;
+
+      .image {
+        grid-area: image;
+
+        min-block-size: 100%;
+        block-size: 0;
+
+        img {
+          block-size: 100%;
+          inline-size: auto;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+
+          border: 2px solid var(--color-primary);
+          border-radius: 999rem;
+        }
+      }
+
+      .name {
+        grid-area: name;
+
+        font-size: var(--fz-500);
+        font-weight: 700;
+      }
+
+      .brief {
+        grid-area: brief;
+
+        overflow: hidden;
+
+        max-inline-size: 100%;
+
+        font-size: var(--fz-300);
+
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+
+        color: var(--color-text-700);
+      }
+
+      .badges {
+        grid-area: badges;
+
+        display: flex;
+        gap: 0.5rem;
+
+        font-size: var(--fz-200);
+
+        .badge {
+          background-color: var(--color-surface-400);
+
+          padding: 0.25rem 0.75rem;
+
+          border-radius: var(--border-radius);
+        }
+      }
+    }
+
+    .address {
+      grid-area: address;
+
+      overflow: hidden;
+
+      max-inline-size: 100%;
+
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+
+      svg {
+        margin-block-end: -0.25em;
+
+        font-size: 1.25em;
+      }
+    }
+
+    .actions {
+      grid-area: actions;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      inline-size: 16rem;
+
+      padding-inline-start: 2rem;
+
+      border-inline-start: 2px dashed var(--color-border);
+
+      .rating {
+        margin-block-end: auto;
+        margin-inline: auto;
+
+        .icon {
+          color: var(--color-star);
+
+          margin-block-end: -0.05em;
+        }
+
+        .average-rating {
+          font-weight: 700;
+        }
+
+        .total-votes {
+          font-size: var(--fz-300);
+        }
+      }
+
+      .caption {
+        font-size: var(--fz-300);
+        text-align: center;
+      }
+
+      a {
+        background-color: var(--color-primary);
+        color: var(--color-primary-opposite);
+
+        padding: 0.5rem 2rem;
+
+        border-radius: var(--border-radius);
+
+        font-weight: 900;
+
+        text-align: center;
+      }
+    }
+  }
+}
