@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-gray-12);
+  background-color: var(--color-surface-500);
 
   display: grid;
   grid-template-areas: "writings visuals" "copy copy";
@@ -37,7 +37,9 @@
 
       > li {
         a {
-          font-size: var(--fz-500);
+          color: var(--color-text-700);
+
+          font-size: 1.5em;
         }
       }
     }
