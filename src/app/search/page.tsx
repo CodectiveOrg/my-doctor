@@ -23,13 +23,11 @@ import styles from "./page.module.css";
 type SearchParams = { [key: string]: string | string[] | undefined };
 
 type Props = {
-  searchParams: Promise<SearchParams>;
+  searchParams: SearchParams;
 };
 
-export default async function Page({
-  searchParams,
-}: Props): Promise<ReactElement> {
-  const defaultFilters = generateDefaultFilters(await searchParams);
+export default function Page({ searchParams }: Props): ReactElement {
+  const defaultFilters = generateDefaultFilters(searchParams);
 
   return (
     <FiltersProvider defaultFilters={defaultFilters}>
