@@ -2,6 +2,7 @@
 
 import { ReactElement, useContext } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import MingcuteStarFill from "@/icons/MingcuteStarFill";
@@ -20,7 +21,7 @@ export default function ResultsComponent(): ReactElement {
         <li key={doctor.id}>
           <div className={styles.header}>
             <div className={styles.image}>
-              <img
+              <Image
                 src={`https://cdn.paziresh24.com${doctor.image}`}
                 alt="عکس پروفایل دکتر"
                 width={150}
