@@ -9,14 +9,16 @@ import MingcuteStarFill from "@/icons/MingcuteStarFill";
 
 import { doctors } from "@/mock/doctors";
 
+import { DoctorModel } from "@/models/doctor.model";
+
 import styles from "./page.module.css";
 
 type Props = {
   params: { id: string };
 };
 
-export default function Page({ params }: Props): ReactElement {
-  const doctor = doctors.find((x) => x.id === params.id);
+export default async function Page({ params }: Props): Promise<ReactElement> {
+  const doctor = await getDoctor(params.id);
 
   if (!doctor) {
     return notFound();
@@ -63,4 +65,13 @@ export default function Page({ params }: Props): ReactElement {
       </div>
     </div>
   );
+}
+
+async function getDoctor(id: string): Promise<DoctorModel | undefined> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const result = doctors.find((x) => x.id === id);
+      resolve(result);
+    }, 1000);
+  });
 }

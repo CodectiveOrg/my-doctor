@@ -1,0 +1,73 @@
+.loading {
+  background-color: hsl(from var(--color-surface-400) h s l / 0.5);
+  backdrop-filter: blur(3px);
+
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: grid;
+  place-content: center;
+
+  .particles {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 9em;
+    height: 5em;
+
+    .particle {
+      --particle-size: 1em;
+      --base-rotation-radius: 2em;
+
+      background-color: var(--color-primary);
+
+      position: absolute;
+
+      display: block;
+
+      width: var(--particle-size);
+      height: var(--particle-size);
+
+      border-radius: 999rem;
+
+      transform-origin: calc(var(--particle-size) / 2 + var(--rotation-radius))
+        calc(var(--particle-size) / 2);
+
+      animation: particle-animation var(--duration) var(--delay) linear infinite;
+
+      &:nth-of-type(2n) {
+        --rotation-radius: var(--base-rotation-radius);
+      }
+
+      &:nth-of-type(2n + 1) {
+        --rotation-radius: calc(-1 * var(--base-rotation-radius));
+
+        animation-direction: reverse;
+      }
+    }
+  }
+}
+
+@keyframes particle-animation {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+
+  49.999% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+}
