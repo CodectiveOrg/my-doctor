@@ -1,25 +1,50 @@
 :root {
-  --color-gray-98: hsl(0deg 0% 98%);
-  --color-gray-90: hsl(0deg 0% 90%);
-  --color-gray-80: hsl(0deg 0% 80%);
-  --color-gray-70: hsl(0deg 0% 70%);
-  --color-gray-40: hsl(0deg 0% 40%);
-  --color-gray-30: hsl(0deg 0% 30%);
-  --color-gray-20: hsl(0deg 0% 20%);
-  --color-gray-16: hsl(0deg 0% 16%);
-  --color-gray-12: hsl(0deg 0% 12%);
-  --color-gray-10: hsl(0deg 0% 10%);
+  --color-gray-99: hsl(200deg 10% 99%);
+  --color-gray-97: hsl(200deg 10% 97%);
+  --color-gray-93: hsl(200deg 10% 93%);
+  --color-gray-90: hsl(200deg 10% 93%);
+  --color-gray-80: hsl(200deg 10% 80%);
+  --color-gray-70: hsl(200deg 10% 70%);
+  --color-gray-40: hsl(200deg 10% 40%);
+  --color-gray-30: hsl(200deg 10% 30%);
+  --color-gray-20: hsl(200deg 10% 20%);
+  --color-gray-16: hsl(200deg 10% 16%);
+  --color-gray-12: hsl(200deg 10% 12%);
+  --color-gray-10: hsl(200deg 10% 10%);
 
-  --color-default-background: var(--color-gray-10);
-  --color-default-foreground: var(--color-gray-98);
+  --color-surface-300: var(--color-gray-93);
+  --color-surface-400: var(--color-gray-97);
+  --color-surface-700: var(--color-gray-99);
 
-  --color-primary: hsl(120deg 50% 48%);
-  --color-primary-fade: hsl(120deg 50% 96%);
-  --color-primary-lighter: hsl(120deg 50% 52%);
-  --color-primary-darker: hsl(120deg 50% 44%);
-  --color-primary-opposite: var(--color-gray-10);
+  --color-text-400: var(--color-gray-10);
+  --color-text-700: var(--color-gray-40);
 
-  --border-radius: 0.875rem;
+  --color-primary: hsl(200deg 90% 46%);
+  --color-primary-fade: hsl(200deg 90% 96%);
+  --color-primary-lighter: hsl(200deg 90% 50%);
+  --color-primary-darker: hsl(200deg 90% 42%);
+  --color-primary-opposite: var(--color-gray-99);
+
+  --color-danger: hsl(10deg 80% 48%);
+  --color-danger-fade: hsl(10deg 80% 96%);
+  --color-danger-lighter: hsl(10deg 80% 52%);
+  --color-danger-darker: hsl(10deg 80% 44%);
+  --color-danger-opposite: var(--color-gray-99);
+
+  --color-star: hsl(50deg 100% 50%);
+
+  --color-border: var(--color-gray-80);
+
+  --shadow-300: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-400: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-500: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-700: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-800: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-900: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  --border-radius: 0.75rem;
 
   --full-width: 75rem;
   --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
@@ -39,7 +64,9 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
+  accent-color: var(--color-primary);
+  caret-color: var(--color-primary);
 }
 
 input,
@@ -61,7 +88,7 @@ ul {
 }
 
 p {
-  color: var(--color-gray-80);
+  color: var(--color-text-700);
 }
 
 a {
@@ -71,8 +98,8 @@ a {
 }
 
 body {
-  background-color: var(--color-default-background);
-  color: var(--color-default-foreground);
+  background-color: var(--color-surface-400);
+  color: var(--color-text-400);
 
   display: grid;
   grid-template-rows: auto 1fr auto auto;
@@ -87,7 +114,7 @@ body {
   }
 
   .tagline {
-    background-color: var(--color-gray-16);
+    background-color: var(--color-surface-300);
 
     padding-block: 1rem;
 
