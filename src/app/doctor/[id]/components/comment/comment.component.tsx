@@ -8,7 +8,7 @@ import { CommentModel } from "@/models/comment.model";
 
 import styles from "./comment.module.css";
 
-const formatter = new Intl.RelativeTimeFormat("fa-IR");
+const formatter = new Intl.RelativeTimeFormat("fa-IR-u-nu-latn");
 
 type Props = {
   comment: CommentModel;
