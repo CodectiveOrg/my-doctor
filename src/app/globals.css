@@ -70,6 +70,9 @@ html {
   color-scheme: light;
   accent-color: var(--color-primary);
   caret-color: var(--color-primary);
+
+  font-family: "Vazirmatn", sans-serif;
+  font-feature-settings: "ss01";
 }
 
 input,
