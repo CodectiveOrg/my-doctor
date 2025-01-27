@@ -11,7 +11,7 @@ import AboutComponent from "./components/about/about.component";
 import AbstractComponent from "./components/abstract/abstract.component";
 import ActivitiesComponent from "./components/activities/activities.component";
 import CommentComponent from "./components/comment/comment.component";
-import VisitComponent from "./components/visit/visit.component";
+import AppointmentComponent from "@/app/doctor/[id]/components/appointment/appointment.component";
 
 import styles from "./page.module.css";
 
@@ -37,8 +37,7 @@ export default async function Page({ params }: Props): Promise<ReactElement> {
         ))}
       </div>
       <div className={styles.actions}>
-        <VisitComponent doctor={doctor} />
-        <CardComponent className={styles.appointment}></CardComponent>
+        <AppointmentComponent doctor={doctor} />
         <CardComponent className={styles.contact}></CardComponent>
       </div>
     </div>

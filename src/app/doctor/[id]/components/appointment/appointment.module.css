@@ -1,4 +1,4 @@
-.visit {
+.appointment {
   display: grid;
   gap: 1rem;
 
@@ -41,9 +41,6 @@
 
     .title {
       font-size: var(--fz-300);
-    }
-
-    .price {
     }
   }
 

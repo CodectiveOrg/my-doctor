@@ -6,18 +6,18 @@ import CardComponent from "@/components/card/card.component";
 
 import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
 
-import styles from "./visit.module.css";
+import styles from "./appointment.module.css";
 
 type Props = {
   doctor: DetailedDoctorModel;
 };
 
-export default function VisitComponent({ doctor }: Props): ReactElement {
+export default function AppointmentComponent({ doctor }: Props): ReactElement {
   return (
-    <CardComponent className={styles.visit}>
+    <CardComponent className={styles.appointment}>
       <header>
         <div className={styles.indicator}></div>
-        <div className={styles.title}>همین الان آنلاین ویزیت شوید</div>
+        <div className={styles.title}>همین الان نوبت دریافت کنید</div>
         <div className={styles.price}>
           {doctor.price.toLocaleString()} تومان
         </div>
@@ -33,7 +33,7 @@ export default function VisitComponent({ doctor }: Props): ReactElement {
         </ul>
       </main>
       <footer>
-        <Link href="#">شروع ویزیت</Link>
+        <Link href="#">دریافت نوبت</Link>
       </footer>
     </CardComponent>
   );
