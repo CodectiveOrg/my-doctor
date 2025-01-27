@@ -1,2 +1,19 @@
 .activities {
+  display: grid;
+  gap: 0.5rem;
+
+  .activity {
+    background-color: var(--color-surface-400);
+
+    display: flex;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+
+    border-radius: var(--border-radius);
+
+    svg {
+      font-size: 1.25em;
+    }
+  }
 }
