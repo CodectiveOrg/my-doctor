@@ -19,6 +19,8 @@ type Props = {
 };
 
 export default async function Page({ params }: Props): Promise<ReactElement> {
+  throw new Error("chiz");
+
   const doctor = await getDoctor(params.id);
 
   if (!doctor) {

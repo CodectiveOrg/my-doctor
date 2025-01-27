@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 
-import Link from "next/link";
-
+import { ButtonLinkComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
 
 import MingcuteCalendarMonthLine from "@/icons/MingcuteCalendarMonthLine";
@@ -24,18 +23,18 @@ export default function ContactComponent({ doctor }: Props): ReactElement {
         <div className={styles.address}>{doctor.address}</div>
       </div>
       <div className={styles.actions}>
-        <Link href="#">
+        <ButtonLinkComponent variant="primary" shape="outlined" href="#">
           <MingcuteCalendarMonthLine />
           برنامه کاری پزشک
-        </Link>
-        <Link href="#">
+        </ButtonLinkComponent>
+        <ButtonLinkComponent variant="primary" shape="outlined" href="#">
           <MingcutePhoneLine />
           {doctor.phone}
-        </Link>
-        <Link href="#">
+        </ButtonLinkComponent>
+        <ButtonLinkComponent variant="primary" shape="outlined" href="#">
           <MingcuteLocationLine />
           مشاهده در نقشه و مسیریابی
-        </Link>
+        </ButtonLinkComponent>
       </div>
     </CardComponent>
   );

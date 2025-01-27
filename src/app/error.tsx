@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import errorImage from "@/assets/illustrations/error.svg";
 
+import { ButtonComponent } from "@/components/button/button.component";
+
 import styles from "./error.module.css";
 
 type Props = {
@@ -25,7 +27,9 @@ export default function Error({ error, reset }: Props): ReactElement {
         <Image src={errorImage} alt="" />
       </div>
       <div className={styles.actions}>
-        <button onClick={reset}>تلاش مجدد</button>
+        <ButtonComponent variant="primary" shape="solid" onClick={reset}>
+          تلاش مجدد
+        </ButtonComponent>
       </div>
       <div className={styles.trace}>
         <details>

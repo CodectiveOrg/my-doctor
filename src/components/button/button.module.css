@@ -1,0 +1,98 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: var(--animation-duration-fast) ease-in-out;
+  transition-property: background-color, color;
+
+  svg {
+    font-size: 1.5em;
+  }
+
+  &.solid {
+    background-color: var(--background-color);
+    color: var(--color);
+
+    &:hover {
+      background-color: var(--background-color-hover);
+    }
+
+    &.default {
+      --background-color: var(--color-surface-700);
+      --background-color-hover: var(--color-surface-300);
+      --color: var(--color-text-400);
+    }
+
+    &.primary {
+      --background-color: var(--color-primary);
+      --background-color-hover: var(--color-primary-darker);
+      --color: var(--color-primary-opposite);
+    }
+
+    &.danger {
+      --background-color: var(--color-danger);
+      --background-color-hover: var(--color-danger-darker);
+      --color: var(--color-danger-opposite);
+    }
+  }
+
+  &.outlined {
+    background-color: var(--background-color);
+    color: var(--color);
+
+    border: 1px solid currentcolor;
+    border-radius: var(--border-radius);
+
+    &:hover {
+      background-color: var(--background-color-hover);
+      color: var(--color-hover);
+    }
+
+    &.default {
+      --background-color: var(--color-surface-700);
+      --background-color-hover: var(--color-text-400);
+      --color: var(--color-text-400);
+      --color-hover: var(--color-surface-700);
+    }
+
+    &.primary {
+      --background-color: var(--color-primary-opposite);
+      --background-color-hover: var(--color-primary);
+      --color: var(--color-primary);
+      --color-hover: var(--color-primary-opposite);
+    }
+
+    &.danger {
+      --background-color: var(--color-danger-opposite);
+      --background-color-hover: var(--color-danger);
+      --color: var(--color-danger);
+      --color-hover: var(--color-danger-opposite);
+    }
+
+    &:hover {
+      background-color: var(--background-color-hover);
+    }
+  }
+
+  &.large {
+    padding: 1rem 2rem;
+  }
+
+  &.inline {
+    padding: 0.2rem 0.5rem;
+
+    font-weight: 700;
+  }
+}

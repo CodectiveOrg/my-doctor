@@ -61,21 +61,4 @@
       }
     }
   }
-
-  footer {
-    a {
-      background-color: var(--color-primary);
-      color: var(--color-primary-opposite);
-
-      display: block;
-
-      padding: 0.5rem 2rem;
-
-      border-radius: var(--border-radius);
-
-      font-weight: 900;
-
-      text-align: center;
-    }
-  }
 }

@@ -2,6 +2,7 @@
 
 import { ReactElement, useContext, useMemo } from "react";
 
+import { ButtonComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
 
 import { FiltersType } from "@/types/filters.type";
@@ -36,9 +37,14 @@ export default function FiltersSummaryComponent(): ReactElement | null {
       <div className={styles["filters-summary"]}>
         <div className={styles.title}>فیلترهای انتخاب‌شده</div>
 
-        <button type="button" onClick={removeAllButtonClickHandler}>
+        <ButtonComponent
+          variant="danger"
+          shape="outlined"
+          type="button"
+          onClick={removeAllButtonClickHandler}
+        >
           حذف همه
-        </button>
+        </ButtonComponent>
 
         <ul className={styles.filters}>
           {filters.query && (

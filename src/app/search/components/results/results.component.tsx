@@ -5,6 +5,8 @@ import { ReactElement, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { ButtonLinkComponent } from "@/components/button/button.component";
+
 import MingcuteStarFill from "@/icons/MingcuteStarFill";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
@@ -58,7 +60,13 @@ export default function ResultsComponent(): ReactElement {
             <div className={styles.caption}>
               اولین نوبت: {doctor.firstAvailableAppointment}
             </div>
-            <Link href={`/doctor/${doctor.id}`}>نوبت‌دهی آنلاین</Link>
+            <ButtonLinkComponent
+              variant="primary"
+              shape="solid"
+              href={`/doctor/${doctor.id}`}
+            >
+              نوبت‌دهی آنلاین
+            </ButtonLinkComponent>
           </div>
         </li>
       ))}

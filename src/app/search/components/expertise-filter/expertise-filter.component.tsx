@@ -2,6 +2,7 @@
 
 import { ReactElement, useContext } from "react";
 
+import { ButtonComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
 
 import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
@@ -58,9 +59,13 @@ export default function ExpertiseFilterComponent(): ReactElement {
       <ul className={styles["expertise-filter"]}>
         {options.map((x) => (
           <li key={x}>
-            <button type="button" onClick={() => buttonClickHandler(x)}>
+            <ButtonComponent
+              className={styles.button}
+              type="button"
+              onClick={() => buttonClickHandler(x)}
+            >
               {x}
-            </button>
+            </ButtonComponent>
           </li>
         ))}
       </ul>

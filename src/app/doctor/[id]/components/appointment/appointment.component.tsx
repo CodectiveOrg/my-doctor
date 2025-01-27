@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 
-import Link from "next/link";
-
+import { ButtonLinkComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
 
 import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
@@ -33,7 +32,9 @@ export default function AppointmentComponent({ doctor }: Props): ReactElement {
         </ul>
       </main>
       <footer>
-        <Link href="#">دریافت نوبت</Link>
+        <ButtonLinkComponent variant="primary" shape="solid" href="#">
+          دریافت نوبت
+        </ButtonLinkComponent>
       </footer>
     </CardComponent>
   );
