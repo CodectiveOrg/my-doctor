@@ -7,10 +7,11 @@ import { doctors } from "@/mock/doctors";
 
 import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
 
+import AboutComponent from "./components/about/about.component";
 import AbstractComponent from "./components/abstract/abstract.component";
 import ActivitiesComponent from "./components/activities/activities.component";
 import CommentComponent from "./components/comment/comment.component";
-import AboutComponent from "./components/about/about.component";
+import VisitComponent from "./components/visit/visit.component";
 
 import styles from "./page.module.css";
 
@@ -36,7 +37,7 @@ export default async function Page({ params }: Props): Promise<ReactElement> {
         ))}
       </div>
       <div className={styles.actions}>
-        <CardComponent className={styles.visit}></CardComponent>
+        <VisitComponent doctor={doctor} />
         <CardComponent className={styles.appointment}></CardComponent>
         <CardComponent className={styles.contact}></CardComponent>
       </div>
@@ -65,6 +66,7 @@ async function getDoctor(id: string): Promise<DetailedDoctorModel | undefined> {
         ].join("\n"),
         consultations: 11995,
         membershipDuration: "4 سال و 1 ماه",
+        price: 300_000,
         comments: [
           {
             id: "1",

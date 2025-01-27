@@ -31,6 +31,9 @@
   --color-danger-darker: hsl(10deg 80% 44%);
   --color-danger-opposite: var(--color-gray-99);
 
+  --color-online-indicator: hsl(160deg 90% 65%);
+  --color-online-indicator-fade: hsl(160deg 90% 85%);
+
   --color-star: hsl(50deg 100% 50%);
 
   --color-border: var(--color-gray-80);

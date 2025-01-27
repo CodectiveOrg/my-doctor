@@ -7,5 +7,6 @@ export type DetailedDoctorModel = DoctorModel & {
   about: string;
   consultations: number;
   membershipDuration: string;
+  price: number;
   comments: CommentModel[];
 };
