@@ -18,16 +18,17 @@ export default function ActivitiesComponent({ doctor }: Props): ReactElement {
     <CardComponent className={styles.activities} title="فعالیت‌ها">
       <div className={styles.activity}>
         <MingcuteMessage4Line />
-        {doctor.consultations}
-        مشاوره فعال
+        <p>
+          <span className={styles.highlight}>{doctor.consultations}</span>{" "}
+          مشاوره فعال
+        </p>
       </div>
       <div className={styles.activity}>
-        <MingcuteCalendarMonthLine />
-        دکتر من بیش از
-        {doctor.membershipDuration}
-        افتخار میزبانی از صفحه اختصاصی
-        {doctor.name}
-        را داشته است.
+        <MingcuteCalendarMonthLine /> دکتر من بیش از{" "}
+        <p>
+          <span className={styles.highlight}>{doctor.membershipDuration}</span>{" "}
+          افتخار میزبانی از صفحه اختصاصی {doctor.name} را داشته است.
+        </p>
       </div>
     </CardComponent>
   );

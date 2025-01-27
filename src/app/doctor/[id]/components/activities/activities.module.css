@@ -6,14 +6,19 @@
     background-color: var(--color-surface-400);
 
     display: flex;
-    gap: 0.5rem;
 
     padding: 0.5rem;
 
     border-radius: var(--border-radius);
 
     svg {
+      margin-inline-end: 0.5rem;
+
       font-size: 1.25em;
+    }
+
+    .highlight {
+      font-weight: 700;
     }
   }
 }
