@@ -20,16 +20,20 @@ export default function ResultsComponent(): ReactElement {
       {filteredDoctors.map((doctor) => (
         <li key={doctor.id}>
           <div className={styles.header}>
-            <div className={styles.image}>
+            <Link className={styles.image} href={`/doctor/${doctor.id}`}>
               <Image
                 src={`https://cdn.paziresh24.com${doctor.image}`}
                 alt="عکس پروفایل دکتر"
                 width={150}
                 height={150}
               />
-            </div>
-            <div className={styles.name}>{doctor.name}</div>
-            <div className={styles.brief}>{doctor.brief}</div>
+            </Link>
+            <Link className={styles.name} href={`/doctor/${doctor.id}`}>
+              {doctor.name}
+            </Link>
+            <Link className={styles.brief} href={`/doctor/${doctor.id}`}>
+              {doctor.brief}
+            </Link>
             <div className={styles.badges}>
               {doctor.badges.map((badge) => (
                 <div key={badge} className={styles.badge}>
