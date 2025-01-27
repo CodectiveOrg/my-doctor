@@ -1,0 +1,82 @@
+.abstract {
+  display: grid;
+  gap: 1rem;
+
+  .general {
+    display: grid;
+    grid-template-areas: "image name rating" "image experience rating" "image mc rating";
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    column-gap: 0.5rem;
+
+    .image {
+      grid-area: image;
+
+      min-block-size: 100%;
+      block-size: 0;
+
+      img {
+        block-size: 100%;
+        inline-size: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+
+        border: 2px solid var(--color-primary);
+        border-radius: 999rem;
+      }
+    }
+
+    .name {
+      grid-area: name;
+
+      font-size: var(--fz-600);
+      font-weight: 700;
+    }
+
+    .experience {
+      font-size: var(--fz-400);
+    }
+
+    .mc {
+      font-size: var(--fz-400);
+    }
+
+    .rating {
+      grid-area: rating;
+
+      background-color: var(--color-star);
+
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+
+      padding: 0.25rem 0.75rem;
+
+      border-radius: 999rem;
+
+      .average-rating {
+        font-weight: 700;
+      }
+
+      .total-votes {
+        font-size: var(--fz-300);
+      }
+    }
+  }
+
+  .badges {
+    display: flex;
+    gap: 0.5rem;
+
+    font-size: var(--fz-200);
+
+    .badge {
+      background-color: var(--color-primary);
+      color: var(--color-primary-opposite);
+
+      padding: 0.25rem 0.75rem;
+
+      border-radius: var(--border-radius);
+    }
+  }
+}

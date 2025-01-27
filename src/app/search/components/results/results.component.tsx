@@ -52,7 +52,7 @@ export default function ResultsComponent(): ReactElement {
                 {Math.floor(doctor.averageRating * 10) / 10}
               </span>{" "}
               <span className={styles["total-votes"]}>
-                ({doctor.totalVotes} نظر)
+                ({doctor.totalVotes.toLocaleString()} نظر)
               </span>
             </div>
             <div className={styles.caption}>

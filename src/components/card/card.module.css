@@ -1,8 +1,18 @@
-.card {
-  background-color: var(--color-surface-700);
-  box-shadow: var(--shadow-400);
+.wrapper {
+  display: grid;
+  gap: 0.25rem;
 
-  padding: 1rem;
+  .title {
+    font-size: var(--fz-500);
+    font-weight: 700;
+  }
 
-  border-radius: var(--border-radius);
+  .card {
+    background-color: var(--color-surface-700);
+    box-shadow: var(--shadow-400);
+
+    padding: 1rem;
+
+    border-radius: var(--border-radius);
+  }
 }
