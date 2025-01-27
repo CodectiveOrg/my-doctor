@@ -8,5 +8,6 @@ export type DetailedDoctorModel = DoctorModel & {
   consultations: number;
   membershipDuration: string;
   price: number;
+  phone: string;
   comments: CommentModel[];
 };

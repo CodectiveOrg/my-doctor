@@ -1,8 +1,6 @@
 import { ReactElement } from "react";
 import { notFound } from "next/navigation";
 
-import CardComponent from "@/components/card/card.component";
-
 import { doctors } from "@/mock/doctors";
 
 import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
@@ -10,8 +8,9 @@ import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
 import AboutComponent from "./components/about/about.component";
 import AbstractComponent from "./components/abstract/abstract.component";
 import ActivitiesComponent from "./components/activities/activities.component";
+import AppointmentComponent from "./components/appointment/appointment.component";
 import CommentComponent from "./components/comment/comment.component";
-import AppointmentComponent from "@/app/doctor/[id]/components/appointment/appointment.component";
+import ContactComponent from "./components/contact/contact.component";
 
 import styles from "./page.module.css";
 
@@ -38,7 +37,7 @@ export default async function Page({ params }: Props): Promise<ReactElement> {
       </div>
       <div className={styles.actions}>
         <AppointmentComponent doctor={doctor} />
-        <CardComponent className={styles.contact}></CardComponent>
+        <ContactComponent doctor={doctor} />
       </div>
     </div>
   );
@@ -66,6 +65,7 @@ async function getDoctor(id: string): Promise<DetailedDoctorModel | undefined> {
         consultations: 11995,
         membershipDuration: "4 سال و 1 ماه",
         price: 300_000,
+        phone: "021-26200832",
         comments: [
           {
             id: "1",

@@ -1,0 +1,48 @@
+.contact {
+  display: grid;
+  gap: 0.5rem;
+
+  .info {
+    .title {
+      font-size: var(--fz-500);
+      font-weight: 700;
+    }
+
+    .address {
+      font-size: var(--fz-300);
+    }
+  }
+
+  .actions {
+    display: grid;
+    gap: 0.5rem;
+
+    a {
+      background-color: transparent;
+      color: var(--color-primary);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      padding: 0.5rem 1rem;
+
+      border: 1px solid currentcolor;
+      border-radius: var(--border-radius);
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      svg {
+        font-size: 1.5em;
+      }
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-primary-opposite);
+      }
+    }
+  }
+}
