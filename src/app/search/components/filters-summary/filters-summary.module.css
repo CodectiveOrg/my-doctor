@@ -44,9 +44,6 @@
         display: grid;
         place-content: center;
 
-        /*border: 1px solid currentcolor;*/
-        /*border-radius: inherit;*/
-
         font-size: 1.5em;
 
         transition: opacity var(--animation-duration-fast) ease-in-out;
