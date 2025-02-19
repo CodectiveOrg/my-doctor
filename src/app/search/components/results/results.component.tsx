@@ -2,7 +2,10 @@
 
 import { ReactElement, useContext } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
+
+import { ButtonLinkComponent } from "@/components/button/button.component";
 
 import MingcuteStarFill from "@/icons/MingcuteStarFill";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
@@ -19,16 +22,20 @@ export default function ResultsComponent(): ReactElement {
       {filteredDoctors.map((doctor) => (
         <li key={doctor.id}>
           <div className={styles.header}>
-            <div className={styles.image}>
-              <img
+            <Link className={styles.image} href={`/doctor/${doctor.id}`}>
+              <Image
                 src={`https://cdn.paziresh24.com${doctor.image}`}
                 alt="عکس پروفایل دکتر"
                 width={150}
                 height={150}
               />
-            </div>
-            <div className={styles.name}>{doctor.name}</div>
-            <div className={styles.brief}>{doctor.brief}</div>
+            </Link>
+            <Link className={styles.name} href={`/doctor/${doctor.id}`}>
+              {doctor.name}
+            </Link>
+            <Link className={styles.brief} href={`/doctor/${doctor.id}`}>
+              {doctor.brief}
+            </Link>
             <div className={styles.badges}>
               {doctor.badges.map((badge) => (
                 <div key={badge} className={styles.badge}>
@@ -47,13 +54,19 @@ export default function ResultsComponent(): ReactElement {
                 {Math.floor(doctor.averageRating * 10) / 10}
               </span>{" "}
               <span className={styles["total-votes"]}>
-                ({doctor.totalVotes} نظر)
+                ({doctor.totalVotes.toLocaleString()} نظر)
               </span>
             </div>
             <div className={styles.caption}>
               اولین نوبت: {doctor.firstAvailableAppointment}
             </div>
-            <Link href={`/doctor/${doctor.id}`}>نوبت‌دهی آنلاین</Link>
+            <ButtonLinkComponent
+              variant="primary"
+              shape="solid"
+              href={`/doctor/${doctor.id}`}
+            >
+              نوبت‌دهی آنلاین
+            </ButtonLinkComponent>
           </div>
         </li>
       ))}

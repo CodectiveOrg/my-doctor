@@ -10,6 +10,8 @@ import {
 
 import { usePathname, useRouter } from "next/navigation";
 
+import { ButtonComponent } from "@/components/button/button.component";
+
 import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
@@ -73,10 +75,10 @@ export default function GlobalSearchBoxComponent(): ReactElement {
       />
       <div className={styles.divider}></div>
       <div className={styles.suffix}>
-        <button type="button">
+        <ButtonComponent type="button">
           <MingcuteLocationLine />
           همه شهرها
-        </button>
+        </ButtonComponent>
       </div>
     </form>
   );

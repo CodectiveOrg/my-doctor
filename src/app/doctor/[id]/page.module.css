@@ -1,0 +1,14 @@
+.page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+
+  margin-block: 2rem;
+
+  .info,
+  .actions {
+    display: grid;
+    align-content: start;
+    gap: 2rem;
+  }
+}

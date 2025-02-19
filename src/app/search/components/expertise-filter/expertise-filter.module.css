@@ -6,22 +6,12 @@
   scrollbar-width: thin;
 
   > li {
-    button {
-      background-color: transparent;
+    padding-inline-end: 1rem;
+
+    .button {
+      justify-content: flex-start;
 
       inline-size: 100%;
-
-      border: none;
-
-      padding: 0.25rem 0.5rem;
-
-      text-align: start;
-
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--color-surface-400);
-      }
     }
   }
 }

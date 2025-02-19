@@ -1,0 +1,20 @@
+.contact {
+  display: grid;
+  gap: 0.5rem;
+
+  .info {
+    .title {
+      font-size: var(--fz-500);
+      font-weight: 700;
+    }
+
+    .address {
+      font-size: var(--fz-300);
+    }
+  }
+
+  .actions {
+    display: grid;
+    gap: 0.5rem;
+  }
+}

@@ -9,20 +9,6 @@
     font-weight: 900;
   }
 
-  button {
-    background-color: var(--color-danger);
-    color: var(--color-danger-opposite);
-
-    padding: 0.25rem 0.5rem;
-
-    border: none;
-    border-radius: var(--border-radius);
-
-    font-size: var(--fz-300);
-
-    cursor: pointer;
-  }
-
   .filters {
     grid-column: 1 / -1;
 
@@ -43,19 +29,29 @@
 
       cursor: pointer;
 
+      &::after {
+        content: "x";
+
+        background-color: hsl(from var(--color-danger-opposite) h s l / 0.5);
+        backdrop-filter: blur(2px);
+        color: var(--color-danger);
+        opacity: 0;
+
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        display: grid;
+        place-content: center;
+
+        font-size: 1.5em;
+
+        transition: opacity var(--animation-duration-fast) ease-in-out;
+      }
+
       &:hover {
         &::after {
-          content: "x";
-
-          background-color: var(--color-danger);
-          color: var(--color-danger-opposite);
-
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-
-          display: grid;
-          place-content: center;
+          opacity: 1;
         }
       }
     }

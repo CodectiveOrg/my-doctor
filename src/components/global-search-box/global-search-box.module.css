@@ -40,31 +40,6 @@
     inline-size: 1px;
   }
 
-  .suffix {
-    button {
-      background-color: transparent;
-
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-
-      padding: 0.5rem 0.5rem;
-
-      border: none;
-      border-radius: var(--border-radius);
-
-      cursor: pointer;
-
-      svg {
-        font-size: 1.5em;
-      }
-
-      &:hover {
-        background-color: var(--color-surface-300);
-      }
-    }
-  }
-
   &:focus-within {
     border-color: var(--color-primary);
 
