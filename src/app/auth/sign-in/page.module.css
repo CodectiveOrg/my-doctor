@@ -1,0 +1,6 @@
+.page {
+  display: grid;
+  justify-items: center;
+
+  margin-block: 2rem;
+}
