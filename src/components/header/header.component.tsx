@@ -37,7 +37,7 @@ export default function HeaderComponent(): ReactElement {
         variant="primary"
         shape="outlined"
         className={styles.cta}
-        href="#"
+        href="/auth/sign-up"
       >
         ورود | ثبت‌نام
       </ButtonLinkComponent>

@@ -9,7 +9,7 @@ import clsx from "clsx";
 import styles from "./button.module.css";
 
 export type ButtonVariant = "default" | "primary" | "danger";
-export type ButtonShape = "solid" | "outlined";
+export type ButtonShape = "inherit" | "solid" | "outlined";
 export type ButtonSize = "medium" | "large";
 export type ButtonPosition = "default" | "inline";
 
