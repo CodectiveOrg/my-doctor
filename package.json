@@ -11,6 +11,7 @@
     "prettier:fix": "prettier . --write"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.1",
     "clsx": "^2.1.1",
     "next": "14.2.18",
     "react": "^18",
