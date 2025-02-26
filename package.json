@@ -10,6 +10,9 @@
     "prettier:check": "prettier . --check",
     "prettier:fix": "prettier . --write"
   },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^6.4.1",
     "clsx": "^2.1.1",
@@ -27,6 +30,7 @@
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.4.2",
     "prisma": "^6.4.1",
+    "tsx": "^4.19.3",
     "typescript": "^5"
   }
 }
