@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import * as jose from "jose";
 
@@ -65,4 +65,20 @@ export async function setAuthCookie(): Promise<void> {
     sameSite: "none",
     maxAge: 3 * 24 * 3600,
   });
+}
+
+export async function isSignedIn(request: NextRequest): Promise<boolean> {
+  const token = request.cookies.get(process.env.TOKEN_KEY!)?.value;
+
+  if (!token) {
+    return false;
+  }
+
+  try {
+    await jose.jwtVerify(token, secret);
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
 }
