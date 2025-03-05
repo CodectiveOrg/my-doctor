@@ -41,6 +41,12 @@
     }
   }
 
+  &:where(:has(input:not(:placeholder-shown))) {
+    .box {
+      color: var(--color-text-400);
+    }
+  }
+
   &:focus-within {
     .box {
       color: var(--color-primary);

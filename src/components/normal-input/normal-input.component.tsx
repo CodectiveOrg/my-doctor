@@ -31,7 +31,7 @@ function NormalInputComponent(
         {prefixIcon && (
           <div className={styles["prefix-icon"]}>{prefixIcon}</div>
         )}
-        <input ref={ref} {...otherProps} />
+        <input ref={ref} placeholder="" {...otherProps} />
         {suffixIcon && (
           <ButtonComponent
             type="button"
