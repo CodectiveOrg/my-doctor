@@ -1,11 +1,9 @@
 "use client";
 
-import { ReactElement, FormEvent } from "react";
+import { ReactElement, FormEvent, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-
-import { toast } from "react-toastify";
 
 import signUpImage from "@/assets/images/sign-up.webp";
 
@@ -20,9 +18,13 @@ import MingcuteIncognitoModeLine from "@/icons/MingcuteIncognitoModeLine";
 import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import MingcuteMailLine from "@/icons/MingcuteMailLine";
 
+import { fetchWithToast } from "@/utils/fetch-utils";
+
 import styles from "@/app/auth/styles/auth-form.module.css";
 
 export default function SignUpFormComponent(): ReactElement {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const formSubmitHandler = async (
     e: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
@@ -37,25 +39,20 @@ export default function SignUpFormComponent(): ReactElement {
       password: formData.get("password") as string,
     };
 
-    const response = await fetch("/api/auth/sign-up", {
-      method: "POST",
-      body: JSON.stringify(dto),
-    });
+    const result = await fetchWithToast<null>(
+      "/api/auth/sign-up",
+      {
+        method: "POST",
+        body: JSON.stringify(dto),
+      },
+      "ثبت‌نام با موفقیت انجام شد.",
+    );
 
-    const result = await response.json();
-
-    if (!response.ok) {
-      let message: string = "خطای غیرمنتظره رخ داد.";
-
-      if ("error" in result) {
-        message = result.error;
-      }
-
-      toast.error(message);
+    if (result.error) {
       return;
     }
 
-    toast.success("ثبت‌نام با موفقیت انجام شد.");
+    formRef.current?.reset();
   };
 
   return (
@@ -64,7 +61,7 @@ export default function SignUpFormComponent(): ReactElement {
         <div className={styles["card-content"]}>
           <div className={styles.writings}>
             <h1>ثبت‌نام!</h1>
-            <form onSubmit={formSubmitHandler}>
+            <form ref={formRef} onSubmit={formSubmitHandler}>
               <NormalInputComponent
                 label="نام و نام خانوادگی"
                 type="text"
