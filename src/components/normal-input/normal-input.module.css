@@ -1,0 +1,49 @@
+.normal-input {
+  .label-text {
+    font-size: var(--fz-300);
+  }
+
+  .box {
+    color: var(--color-border);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+
+    border: 1px solid currentcolor;
+    border-radius: var(--border-radius);
+
+    input {
+      flex: 1 1 0;
+
+      background-color: var(--color-surface-700);
+      color: inherit;
+
+      block-size: 1em;
+
+      border: none;
+
+      font-size: 1rem;
+      line-height: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .prefix-icon,
+    .suffix-icon {
+      display: grid;
+
+      font-size: 1.25rem;
+    }
+  }
+
+  &:focus-within {
+    .box {
+      color: var(--color-primary);
+    }
+  }
+}

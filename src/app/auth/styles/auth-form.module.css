@@ -1,0 +1,41 @@
+.auth-form {
+  inline-size: min(50rem, 100%);
+
+  .card-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+
+    .writings {
+      display: grid;
+      gap: 1rem;
+
+      form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .change-form {
+        a {
+          color: var(--color-primary);
+
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .visuals {
+      min-block-size: 100%;
+      block-size: 0;
+      inline-size: 100%;
+
+      img {
+        block-size: 100%;
+        inline-size: 100%;
+        object-fit: cover;
+
+        border-radius: var(--border-radius);
+      }
+    }
+  }
+}

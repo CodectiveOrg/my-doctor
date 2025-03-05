@@ -1,10 +1,11 @@
 .button {
+  background-color: transparent;
+  color: inherit;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
-  padding: 0.5rem 1rem;
 
   border: none;
   border-radius: var(--border-radius);
@@ -17,8 +18,12 @@
   transition: var(--animation-duration-fast) ease-in-out;
   transition-property: background-color, color;
 
-  svg {
-    font-size: 1.5em;
+  &:not(.inherit) {
+    padding: 0.5rem 1rem;
+
+    svg {
+      font-size: 1.5em;
+    }
   }
 
   &.solid {
