@@ -7,6 +7,7 @@ import prisma from "@/lib/prisma";
 import { ApiResponseType } from "@/types/api-response.type";
 
 import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
+import { comparePassword } from "@/utils/bcrypt.utils";
 
 export async function POST(request: Request): Promise<ApiResponseType<null>> {
   return wrapWithTryCatch(async () => {
@@ -27,7 +28,7 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
       );
     }
 
-    if (body.password !== foundUser.password) {
+    if (!(await comparePassword(body.password, foundUser.password))) {
       return NextResponse.json(
         { error: "رمز عبور اشتباه است." },
         { status: 401 },
