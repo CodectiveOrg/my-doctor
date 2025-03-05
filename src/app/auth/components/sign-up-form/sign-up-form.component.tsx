@@ -4,6 +4,7 @@ import { ReactElement, FormEvent, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import signUpImage from "@/assets/images/sign-up.webp";
 
@@ -23,6 +24,8 @@ import { fetchWithToast } from "@/utils/fetch-utils";
 import styles from "@/app/auth/styles/auth-form.module.css";
 
 export default function SignUpFormComponent(): ReactElement {
+  const router = useRouter();
+
   const formRef = useRef<HTMLFormElement>(null);
 
   const formSubmitHandler = async (
@@ -53,6 +56,7 @@ export default function SignUpFormComponent(): ReactElement {
     }
 
     formRef.current?.reset();
+    router.push("/dashboard");
   };
 
   return (
