@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/dashboard",
+        destination: "/dashboard/profile",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

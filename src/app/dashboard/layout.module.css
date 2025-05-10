@@ -1,0 +1,9 @@
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+
+  min-block-size: 100%;
+
+  padding-block: 1rem;
+}
