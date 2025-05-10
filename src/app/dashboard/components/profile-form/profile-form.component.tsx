@@ -1,4 +1,4 @@
-import { FormEvent, ReactElement, useEffect, useRef, useState } from "react";
+import { FormEvent, ReactElement, useEffect, useState } from "react";
 
 import Loading from "@/app/loading";
 
