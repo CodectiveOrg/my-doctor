@@ -1,1 +1,30 @@
-{}
+{
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^(vite|@vitejs)(/(.*))?$",
+    "^(react|react-dom)(/(.*))?$",
+    "^next(/(.*))?$",
+    "^@prisma(/(.*))?$",
+    "^clsx(/(.*))?$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/assets",
+    "^@/components",
+    "^@/context",
+    "^@/dto",
+    "^@/hooks",
+    "^@/icons",
+    "^@/lib",
+    "^@/logo",
+    "^@/mock",
+    "^@/models",
+    "^@/providers",
+    "^@/types",
+    "^@/utils",
+    "^@/styles",
+    "^(\\.|\\.\\.)/(.(?!.(css|scss)))*$",
+    "\\.(css|scss)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true
+}
