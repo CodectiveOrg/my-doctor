@@ -2,8 +2,8 @@ import { ReactElement } from "react";
 
 import type { Metadata } from "next";
 
-import HeaderComponent from "@/components/header/header.component";
 import FooterComponent from "@/components/footer/footer.component";
+import HeaderComponent from "@/components/header/header.component";
 import ToasterComponent from "@/components/toaster/toaster.component";
 
 import "@/styles/typography.css";

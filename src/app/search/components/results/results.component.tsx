@@ -5,12 +5,12 @@ import { ReactElement, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { DoctorsContext } from "@/app/search/providers/doctors/doctors.provider";
+
 import { ButtonLinkComponent } from "@/components/button/button.component";
 
-import MingcuteStarFill from "@/icons/MingcuteStarFill";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
-
-import { DoctorsContext } from "@/app/search/providers/doctors/doctors.provider";
+import MingcuteStarFill from "@/icons/MingcuteStarFill";
 
 import styles from "./results.module.css";
 

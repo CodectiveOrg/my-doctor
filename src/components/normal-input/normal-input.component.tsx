@@ -1,4 +1,4 @@
-import { ComponentProps, ReactElement, forwardRef, ForwardedRef } from "react";
+import { ComponentProps, ForwardedRef, ReactElement, forwardRef } from "react";
 
 import clsx from "clsx";
 

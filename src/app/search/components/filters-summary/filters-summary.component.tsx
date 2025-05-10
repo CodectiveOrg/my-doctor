@@ -2,12 +2,12 @@
 
 import { ReactElement, useContext, useMemo } from "react";
 
+import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
+
 import { ButtonComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
 
 import { FiltersType } from "@/types/filters.type";
-
-import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
 
 import styles from "./filters-summary.module.css";
 

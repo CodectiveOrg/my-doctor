@@ -2,10 +2,10 @@
 
 import { ReactElement, useContext } from "react";
 
+import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
+
 import { ButtonComponent } from "@/components/button/button.component";
 import CardComponent from "@/components/card/card.component";
-
-import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
 
 import styles from "./expertise-filter.module.css";
 

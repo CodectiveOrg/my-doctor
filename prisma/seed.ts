@@ -1,4 +1,5 @@
-import { PrismaClient, Prisma } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
+
 import { hashPassword } from "@/utils/bcrypt.utils";
 
 const prisma = new PrismaClient();

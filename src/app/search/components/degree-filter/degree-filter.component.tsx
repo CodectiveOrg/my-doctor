@@ -3,7 +3,6 @@
 import { ReactElement, useContext } from "react";
 
 import RadioFilterComponent from "@/app/search/components/radio-filter/radio-filter.component";
-
 import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
 
 export default function DegreeFilterComponent(): ReactElement {

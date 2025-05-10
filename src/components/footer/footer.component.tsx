@@ -3,9 +3,9 @@ import { ReactElement } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import idkLogo from "@/assets/logo/idk.svg";
 import certificateLogo from "@/assets/logo/certificate.svg";
 import enamadLogo from "@/assets/logo/enamad.svg";
+import idkLogo from "@/assets/logo/idk.svg";
 
 import MingcuteLinkedinFill from "@/icons/MingcuteLinkedinFill";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
