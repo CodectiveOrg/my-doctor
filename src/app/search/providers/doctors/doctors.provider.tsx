@@ -1,18 +1,18 @@
 "use client";
 
 import {
-  createContext,
   PropsWithChildren,
   ReactElement,
+  createContext,
   useCallback,
   useContext,
   useEffect,
   useState,
 } from "react";
 
-import { DoctorModel } from "@/models/doctor.model";
-
 import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
+
+import { DoctorModel } from "@/models/doctor.model";
 
 type ContextValue = {
   filteredDoctors: DoctorModel[];

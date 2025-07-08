@@ -3,16 +3,16 @@
 import {
   ComponentProps,
   ForwardedRef,
-  forwardRef,
   ReactElement,
+  forwardRef,
   useState,
 } from "react";
 
 import NormalInputComponent from "@/components/normal-input/normal-input.component";
 
-import MingcuteKey2Line from "@/icons/MingcuteKey2Line";
 import MingcuteEye2Line from "@/icons/MingcuteEye2Line";
 import MingcuteEyeCloseLine from "@/icons/MingcuteEyeCloseLine";
+import MingcuteKey2Line from "@/icons/MingcuteKey2Line";
 
 type Props = ComponentProps<typeof NormalInputComponent>;
 

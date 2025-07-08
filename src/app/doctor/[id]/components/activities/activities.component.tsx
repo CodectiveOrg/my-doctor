@@ -2,8 +2,8 @@ import { ReactElement } from "react";
 
 import CardComponent from "@/components/card/card.component";
 
-import MingcuteMessage4Line from "@/icons/MingcuteMessage4Line";
 import MingcuteCalendarMonthLine from "@/icons/MingcuteCalendarMonthLine";
+import MingcuteMessage4Line from "@/icons/MingcuteMessage4Line";
 
 import { DetailedDoctorModel } from "@/models/detailed-doctor.model";
 

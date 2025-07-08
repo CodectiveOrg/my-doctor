@@ -2,9 +2,8 @@
 
 import { ReactElement, useContext } from "react";
 
-import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
-
 import RadioFilterComponent from "@/app/search/components/radio-filter/radio-filter.component";
+import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
 
 export default function GenderFilterComponent(): ReactElement {
   const { filters, dispatchFilters } = useContext(FiltersContext);

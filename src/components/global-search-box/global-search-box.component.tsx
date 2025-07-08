@@ -10,12 +10,12 @@ import {
 
 import { usePathname, useRouter } from "next/navigation";
 
+import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
+
 import { ButtonComponent } from "@/components/button/button.component";
 
-import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
 import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
-
-import { FiltersContext } from "@/app/search/providers/filters/filters.provider";
+import MingcuteSearchLine from "@/icons/MingcuteSearchLine";
 
 import styles from "./global-search-box.module.css";
 

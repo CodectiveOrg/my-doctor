@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+
 import { notFound } from "next/navigation";
 
 import { doctors } from "@/mock/doctors";

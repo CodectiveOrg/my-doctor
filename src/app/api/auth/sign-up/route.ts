@@ -37,9 +37,11 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
     }
 
     const hashedPassword = await hashPassword(body.password);
-    await prisma.user.create({ data: { ...body, password: hashedPassword } });
+    const createdUser = await prisma.user.create({
+      data: { ...body, password: hashedPassword },
+    });
 
-    await setAuthCookie();
+    await setAuthCookie(createdUser.id);
 
     return NextResponse.json({ data: null }, { status: 201 });
   });

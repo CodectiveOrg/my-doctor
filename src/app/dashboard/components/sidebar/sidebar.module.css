@@ -1,0 +1,56 @@
+.sidebar {
+  .item {
+    position: relative;
+
+    &.active {
+      color: var(--color-primary);
+
+      &::before {
+        content: "";
+
+        background-color: var(--color-primary);
+
+        position: absolute;
+        inset-block: 0;
+        inset-inline-start: 0;
+
+        block-size: 1.5em;
+        inline-size: 2px;
+
+        margin: auto;
+
+        border-radius: 999rem;
+      }
+    }
+  }
+
+  .item > a,
+  button.item {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.5rem 1rem;
+
+    > svg {
+      font-size: 1.25em;
+    }
+
+    &:hover {
+      background-color: var(--color-surface-300);
+    }
+  }
+
+  button.item {
+    background-color: transparent;
+
+    inline-size: 100%;
+
+    border: none;
+
+    text-align: start;
+
+    cursor: pointer;
+  }
+}

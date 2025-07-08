@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, FormEvent, useRef } from "react";
+import { FormEvent, ReactElement, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -16,8 +16,8 @@ import PasswordInputComponent from "@/components/password-input/password-input.c
 import { SignUpDto } from "@/dto/auth.dto";
 
 import MingcuteIncognitoModeLine from "@/icons/MingcuteIncognitoModeLine";
-import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 import MingcuteMailLine from "@/icons/MingcuteMailLine";
+import MingcuteUser3Line from "@/icons/MingcuteUser3Line";
 
 import { fetchWithToast } from "@/utils/fetch-utils";
 

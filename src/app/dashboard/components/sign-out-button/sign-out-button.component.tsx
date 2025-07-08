@@ -4,13 +4,17 @@ import { ReactElement } from "react";
 
 import { useRouter } from "next/navigation";
 
-import { ButtonComponent } from "@/components/button/button.component";
+import MingcuteExitLine from "@/icons/MingcuteExitLine";
 
 import { fetchWithToast } from "@/utils/fetch-utils";
 
-import styles from "./page.module.css";
+type Props = {
+  className: string;
+};
 
-export default function Page(): ReactElement {
+export default function SignOutButtonComponent({
+  className,
+}: Props): ReactElement {
   const router = useRouter();
 
   const signOutButtonClickHandler = async (): Promise<void> => {
@@ -30,11 +34,9 @@ export default function Page(): ReactElement {
   };
 
   return (
-    <div className={styles.page}>
-      <h1>داشبورد</h1>
-      <ButtonComponent variant="danger" onClick={signOutButtonClickHandler}>
-        خروج
-      </ButtonComponent>
-    </div>
+    <button className={className} onClick={signOutButtonClickHandler}>
+      <MingcuteExitLine />
+      خروج
+    </button>
   );
 }
